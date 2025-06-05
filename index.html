@@ -1,6 +1,195 @@
 <!DOCTYPE html><!DOCTYPE html>
 <html lang="es">
+<head><!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¡Página Espectacular!</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+      color: #1E293B;
+      line-height: 1.6;
+    }
+
+    /* Header con imagen de fondo */
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    nav {
+      margin-top: 1rem;
+      z-index: 2;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #3B82F6;
+      border-color: white;
+      box-shadow: 0 4px 12px rgba(59,130,246,0.5);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: -80px auto 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    section.card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    section.card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(59,130,246,0.3);
+    }
+
+    section.card h2 {
+      margin-bottom: 1rem;
+      color: #1E3A8A;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.8rem;
+    }
+
+    section.card p {
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: #1E3A8A;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    /* Animación */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
+    /* Responsividad */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        margin: 0 0.6rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      main {
+        margin: -60px 1rem 2rem 1rem;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡Bienvenido a Mi Página Espectacular!</h1>
+    <nav>
+      <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+      <a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="card">
+      <h2><i class="fas fa-rocket"></i> Inicio</h2>
+      <p>Esta página está diseñada para ser moderna, atractiva y funcional. Aquí encontrarás información clara y visualmente agradable.</p>
+    </section>
+
+    <section id="servicios" class="card">
+      <h2><i class="fas fa-tools"></i> Servicios</h2>
+      <p>Ofrecemos desarrollo web personalizado, diseño gráfico y consultoría para impulsar tu negocio al siguiente nivel.</p>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2><i class="fas fa-phone"></i> Contacto</h2>
+      <p>¿Quieres saber más? Escríbenos a contacto@ejemplo.com o síguenos en nuestras redes sociales para estar al día.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mi Página Espectacular. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mi Página Bonita</title>
